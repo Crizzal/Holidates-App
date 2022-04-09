@@ -3,6 +3,13 @@ const CountriesUrl = `https://holidayapi.com/v1/countries?pretty&key=${API_KEY}`
 const HolidaysUrl = `https://holidayapi.com/v1/holidays?pretty&key=${API_KEY}`;
 const LanguagesUrl = `https://holidayapi.com/v1/languages?pretty&key=${API_KEY}`;
 
+let searchQuery = null;
+let yearQuery = 2021;
+let dayQuery = null;
+let countryQuery = "VN";
+let languageQuery = null;
+let monthQuery = null;
+
 
 // Get information 
 
@@ -184,15 +191,8 @@ const renderHolidays = async () => {
     }
 };
 
-renderHolidays();
 
 //  Handle event
-let searchQuery = null;
-let yearQuery = 2021;
-let dayQuery = null;
-let countryQuery = "VN";
-let languageQuery = null;
-let monthQuery = null;
 
 document
     .getElementById("countries-list-btn")
